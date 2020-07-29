@@ -21,4 +21,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'sjl/gundo.vim'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 call plug#end()
+
+" Google CodeFtm configs
+augroup autoformat_settings
+  autocmd FileType c,cpp,javascriptAutoFormatBuffer clang-format
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+augroup END
+
