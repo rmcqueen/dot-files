@@ -1,7 +1,6 @@
 set tabstop=4 shiftwidth=4 expandtab "Sets tab to make 4 spaces instead
 set number
 
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
@@ -17,3 +16,9 @@ if !has('gui_running')
 endif
 set laststatus=2
 
+
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+Plug 'sjl/gundo.vim'
+call plug#end()
