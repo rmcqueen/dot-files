@@ -1,5 +1,6 @@
 alias gco="git checkout"
 alias gp="git push"
+alias gd="git diff"
 alias gs="git status"
 alias gpu="git pull origin"
 alias gri="git rebase -i"
