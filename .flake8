@@ -1,0 +1,13 @@
+[flake8]
+max-line-length = 100
+
+# Formatting
+format = default
+count = True
+statistics = True
+
+# Log Output
+output-file = .flake8.log
+## Dump to stdout as well as log file.
+tee = True
+
