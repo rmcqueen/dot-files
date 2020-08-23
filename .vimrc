@@ -14,7 +14,7 @@ if has("persistent_undo")
   set undodir=~/.undodir/
   set undofile
 endif
-    
+
 map <C-n> :NERDTreeToggle<CR>
 if !has('gui_running')
   set t_Co=256
@@ -28,6 +28,7 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'mbbill/undotree'
+Plug 'JamshedVesuna/vim-markdown-preview'
 call plug#end()
 
 " Google CodeFmt configs
@@ -46,4 +47,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Autotrim trailing whitespace on :w
 autocmd BufWritePre * %s/\s\+$//e
+
+" vim-markdown-preview
+let vim_markdown_preview_browser='Firefox'
 
