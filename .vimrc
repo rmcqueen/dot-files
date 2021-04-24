@@ -7,6 +7,17 @@ set updatetime=50
 set laststatus=2
 set colorcolumn=100
 
+" Install vim-plug if it doesn't already exist.
+let vimplug_path='~/.vim/autoload/plug.vim'
+if empty(glob(vimplug_path))
+    execute '!curl -fLo ' . vimplug_path . ' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+let colorscheme_path='~/.vim/colors/fogbell_light.vim'
+if empty(glob(colorscheme_path))
+    execute '!curl -fLo ' . colorscheme_path . ' --create-dirs https://raw.githubusercontent.com/jaredgorski/fogbell.vim/master/colors/fogbell_light.vim'
+endif
+
 colorscheme fogbell_light
 
 nnoremap <F5> :UndotreeToggle<cr>
